@@ -1,0 +1,30 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/functions';
+@import 'abstracts/fonts';
+
+// Import Base Styles
+@import 'base/reset';
+@import 'base/global';
+@import 'base/typography';
+
+// Import Layout Styles
+@import 'layout//Header/header.scss';
+@import 'layout/Header/mobilemenu.scss';
+@import 'layout/Header/contact_modal.scss';
+@import 'layout/Footer/footer.scss';
+@import 'layout/section-space/section-space.scss';
+
+
+// Import Component Styles
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/shapeAnimation/shapeAnimation.scss';
+@import 'components/sectionTtitle/sectionTtitle.scss';
+
+
+
+// Import Page Styles
+@import 'pages/home/home.scss';
+@import 'pages/home/heroSlider/heroslider.scss';
+

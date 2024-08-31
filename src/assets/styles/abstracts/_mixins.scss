@@ -1,0 +1,37 @@
+@use 'sass:math';
+
+@mixin flex-center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+@mixin transition($time){
+    transition: all $time ease-in-out;
+}
+
+@mixin border-gray($white, $boder_type){
+    border: $white $boder-type $border-gray-200;
+}
+
+@mixin tablet {
+    @media only screen and ($min-width:768px){
+        @content;
+    }
+}
+@mixin desktop {
+    @media only screen and ($min-width:992px){
+        @content;
+    }
+}

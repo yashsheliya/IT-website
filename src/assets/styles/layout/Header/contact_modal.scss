@@ -1,0 +1,88 @@
+.Contact_Modal_wrapper {
+    .MuiBackdrop-root {
+        background: rgba(0, 0, 0, .6);
+    }
+
+    .MuiPaper-root {
+        width: 350px;
+        box-shadow: none;
+        overflow-x: hidden;
+    }
+
+    .Contact_Modal {
+        &__header {
+            background-color: $bs-white;
+            padding: $spacing-unit * 2;
+            @include flex-between-center;
+            border-bottom: 1px solid $border-gray-200;
+            position: fixed;
+            width: 350px;
+            z-index: 10;
+        }
+
+        &__Logo {
+            a img {
+                width: 150px;
+            }
+        }
+
+        &__close {
+            color: $bs-black;
+            width: 40px;
+            height: 40px;
+            @include flex-center-center;
+            cursor: pointer;
+        }
+
+        &__body {
+            padding: $spacing-unit * 2;
+            margin-top: 73px;
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            &-card {
+                padding: $spacing-unit * 2;
+                border-radius: $spacing-unit * 2;
+                background-color: $bs-white;
+                text-align: center;
+                box-shadow: 1px 1px 11px #d1d1d13d;
+                @include border-gray(1px,solid);
+
+                &-icon {
+                    background: $primary-color;
+                    height: 65px;
+                    width: 65px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0 auto;
+                    border-radius: 100%;
+                    box-shadow: inset 0px 0px 0px 10px #fff;
+                    color: #fff;
+                    font-size: 24px;
+                    box-sizing: border-box;
+                    outline: 2px dashed $primary-color;
+                }
+            }
+            &-title{
+                margin: $spacing-unit + 4  0px 0px;
+                font-size: 20px;
+                line-height: 22px;
+            }
+            &-description{
+                margin: $spacing-unit - 4 0px 0px;
+                a{
+                    display: block;
+                }
+
+            }
+
+
+        }
+
+    }
+}

@@ -1,0 +1,92 @@
+.infotechno-hero {
+    background-color: #141414;
+    overflow: hidden;
+    position: relative;
+    .hero-mySwiper {
+
+        &-slider-items {
+            align-items: center;
+        }
+
+        .swiper-pagination {
+            .swiper-pagination-bullet {
+                background-color: $background-color;
+
+                &-active {
+                    background-color: $primary-color;
+                }
+            }
+        }
+
+        .infotechno-hero-text {
+            max-width: 605px;
+            float: right;
+            width: 100%;
+            padding-left: 30px;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.5s ease-in-out;
+            transform: translateX(-20px);
+
+            h6 {
+                color: $bs-white;
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+
+            .title {
+                color: $bs-white;
+                font-weight: 700;
+                margin-bottom: 15px;
+            }
+
+            p {
+                color: $bs-white;
+            }
+        }
+
+        .swiper-slide.swiper-slide-active {
+            .infotechno-hero-inner-images {
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(0);
+            }
+
+            .infotechno-hero-text {
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(0);
+            }
+        }
+
+        .infotechno-hero-inner-images {
+            margin-top: 20px;
+            position: relative;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.5s ease-in-out;
+            transform: translateX(20px);
+
+            img {
+                max-width: 100%;
+                display: block;
+            }
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
+            & {
+                padding: $spacing-unit * 3 0px;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            & {
+                padding: $spacing-unit * 5 0px;
+            }
+
+            &-slider-items .infotechno-hero-text {
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+// Import Bootstrap functions first
+@import '../../../../node_modules/bootstrap/scss/functions';
+
+// Import Bootstrap variables
+@import '../../../../node_modules/bootstrap/scss/variables';
+
+// Override Bootstrap container max widths
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1200px
+);
+
+// Import the rest of Bootstrap
+@import '../../../../node_modules/bootstrap/scss/bootstrap';   

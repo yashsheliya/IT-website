@@ -1,0 +1,97 @@
+.mobile-menu-wrapper {
+    .MuiBackdrop-root {
+        background: rgba(0, 0, 0, .6);
+    }
+
+    .MuiPaper-root {
+        width: 350px;
+        box-shadow: none;
+        background-color: $primary-color;
+        overflow-x: hidden;
+    }
+
+    .mobile-menu {
+        &__header {
+            background-color: $bs-white;
+            padding: $spacing-unit * 2;
+            @include flex-between-center;
+            position: fixed;
+            width: 350px;
+            z-index: 10;
+        }
+
+        &__Logo {
+            a img {
+                width: 150px;
+            }
+        }
+
+        &__close {
+            color: $bs-black;
+            width: 40px;
+            height: 40px;
+            @include flex-center-center;
+            cursor: pointer;
+        }
+
+        &__body {
+            padding: $spacing-unit * 2;
+            margin-top: 72px;
+
+            >.mobile-menu__list {
+                >li {
+                    border-bottom: 1px solid rgba(255, 255, 255, .15);
+                    list-style: none;
+                    position: relative;
+
+                    >a {
+                        display: block;
+                        color: $bs-white;
+                        font-weight: 500;
+                        padding: $spacing-unit * 2 0px;
+                        transition: all .7s cubic-bezier(.645, .045, .355, 1);
+                    }
+
+                    .DownIcon {
+                        position: absolute;
+                        top: 8px;
+                        right: 0px;
+                        color: $bs-white;
+                        background: rgba(255, 255, 255, .1);
+                        height: 40px;
+                        width: 40px;
+                        @include flex-center-center;
+                    }
+
+                    .sub-menu__list {
+                        padding: 12px 0 14px 10px;
+                        border-top: 1px solid rgba(255, 255, 255, .15);
+
+                        li {
+                            list-style: none;
+
+                            a {
+                                display: block;
+                                color: rgba(255, 255, 255, .7);
+                                font-size: 15px;
+                                font-weight: 500;
+                                padding: $spacing-unit + 2 0px;
+                                transition: all .7s cubic-bezier(.645, .045, .355, 1);
+                            }
+                        }
+                    }
+                }
+
+                li:last-child {
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 400px) {
+        .MuiPaper-root,.mobile-menu__header{
+            width: 100%;
+        }
+    }
+}
